@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Form</title>
+</head>
+<body>
+    <h1>Приветствие</h1>
+    {% if name %}
+        <p>Привет, {{ name }}!</p>
+        <a href="/">Назад</a>
+    {% else %}
+        <form method="post">
+            <label for="name">Введите ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Отправить</button>
+        </form>
+    {% endif %}
+</body>
+</html>
